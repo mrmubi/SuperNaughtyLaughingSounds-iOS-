@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <imageView key="view" contentMode="scaleAspectFit" image="m0.png" id="0qg-gb-Is7" customClass="imageView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                        </accessibility>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xYa-Za-y2u" appends="YES" id="XoI-HT-miP"/>
+                            <outletCollection property="gestureRecognizers" destination="uxC-u8-gbO" appends="YES" id="VGo-zh-IUA"/>
+                            <outletCollection property="gestureRecognizers" destination="uxC-u8-gbO" appends="YES" id="xDw-kH-EGu"/>
+                        </connections>
+                    </imageView>
+                    <connections>
+                        <outlet property="imageView2" destination="0qg-gb-Is7" id="vOG-L3-T1M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="QnF-fw-ski">
+                    <connections>
+                        <action selector="iPadImgSwapAction:" destination="2" id="Qox-rE-tTF"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="xYa-Za-y2u">
+                    <connections>
+                        <action selector="iPadImgTap:" destination="2" id="M6c-Fe-CBh"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="uxC-u8-gbO">
+                    <connections>
+                        <action selector="iPadImgLongPress:" destination="2" id="4dw-9a-fsi"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-496" y="-297"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="m0.png" width="640" height="480"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
